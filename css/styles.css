@@ -473,6 +473,7 @@ a:hover {color: #89A6AB; padding-bottom: 5px;}
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
+  gap: 60px;
   border: 1px none #000;
   font-size: 18px;
   line-height: 24px;
@@ -485,20 +486,26 @@ a:hover {color: #89A6AB; padding-bottom: 5px;}
 }
 
 .feature-content {
-  width: 50vw;
+  flex: 1 1 50%;
   max-width: 700px;
+  min-width: 0;
   padding-left: 0;
   padding-right: 0;
-  flex: 0 0 auto;
   border: 1px none #000;
 }
 
 .feature-image {
   display: flex;
-  width: 50vw;
+  flex: 1 1 50%;
+  min-width: 0;
   justify-content: center;
   align-items: center;
   border: 1px none #000;
+}
+
+.feature-image img {
+  max-width: 100%;
+  height: auto;
 }
 
 /* Wrap & Container
@@ -1035,8 +1042,14 @@ button:focus:not(:focus-visible) {
     margin-bottom: 40px !important;
   }
 
-  .feature-wrap {
-    flex-direction: row;
+  .feature-wrap,
+  .feature-wrap.reverse {
+    flex-direction: column;
+  }
+
+  .feature-content,
+  .feature-image {
+    width: 100%;
   }
 
   .footer-link {
