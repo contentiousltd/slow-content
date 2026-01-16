@@ -8,6 +8,23 @@
  */
 
 /* ==========================================================================
+   COLOUR VARIABLES (Contentious palette)
+   ========================================================================== */
+:root {
+  --gloaming-900: #1A1918;
+  --gloaming-700: #383533;
+  --gloaming-500: #4F4D4B;
+  --limestone-500: #F2F2E7;
+  --limestone-100: #F8F8F2;
+  --wave-500: #89A6AB;
+  --wave-700: #7A9398;
+  --sapling-500: #81A479;
+  --sapling-700: #678361;
+  --sapling-overlay: hsl(109 19% 56% / 98%);
+  --sunshine-500: #E7AB3F;
+}
+
+/* ==========================================================================
    1. RESET (normalize.css v3.0.3)
    ========================================================================== */
 
@@ -230,7 +247,7 @@ th {
 h1 {
   margin-top: 20px;
   margin-bottom: 10px;
-  color: #F2F2E7;
+  color: var(--limestone-500);
   font-size: 10vh;
   line-height: 10vh;
   font-weight: 700;
@@ -239,7 +256,7 @@ h1 {
 h2 {
   margin-top: 20px;
   margin-bottom: 20px;
-  color: #F2F2E7;
+  color: var(--limestone-500);
   font-size: 52px;
   line-height: 64px;
   font-weight: 700;
@@ -248,7 +265,7 @@ h2 {
 h3 {
   margin-top: 10px;
   margin-bottom: 25px;
-  color: #4F4D4B;
+  color: var(--gloaming-500);
   font-size: 34px;
   line-height: 50px;
   font-weight: 400;
@@ -266,19 +283,19 @@ h4 {
 
 p {
   margin-bottom: 12px;
-  color: #4F4D4B;
+  color: var(--gloaming-500);
   font-size: 26px;
   line-height: 40px;
 }
 
 a {
-  color: #678361;
+  color: var(--sapling-700);
   text-decoration: none;
   transition: all 1s ease-in-out;
 }
 
 a:hover {
-  color: #7A9398;
+  color: var(--wave-700);
 }
 
 /* Body
@@ -293,7 +310,7 @@ body {
 }
 
 .body {
-  background-color: #F8F8F2;
+  background-color: var(--limestone-100);
   font-family: 'Bely', sans-serif;
 }
 
@@ -312,7 +329,7 @@ body {
   height: auto;
   padding-top: 10vh;
   padding-bottom: 10vh;
-  background-color: #1A1918;
+  background-color: var(--gloaming-900);
 }
 
 .section.wide.img {
@@ -325,7 +342,7 @@ body {
   justify-content: center;
   align-items: flex-start;
   background-color: #1eb6af;
-  background-image: linear-gradient(135deg, #89A6AB, #81A479, #89A6AB 0, #3C494B);
+  background-image: linear-gradient(135deg, var(--wave-500), var(--sapling-500), var(--wave-500) 0, #3C494B);
 }
 
 .section.center-copy {
@@ -402,7 +419,7 @@ body {
   padding-right: 0px;
   padding-left: 0px;
   flex: 0 auto;
-  color: #F2F2E7;
+  color: var(--limestone-500);
   font-size: 20px;
   font-weight: 400;
   transition: all 1s ease-in-out;
@@ -411,13 +428,13 @@ body {
 .nav-link:hover,
 a:hover,
 .calltoaction a:hover {
-  box-shadow: inset 0 -5px 0 0 #89A6AB;
-  color: #F2F2E7;
+  box-shadow: inset 0 -5px 0 0 var(--wave-500);
+  color: var(--limestone-500);
   padding-bottom: 10px;
 }
 
 a:hover {
-  color: #89A6AB;
+  color: var(--wave-500);
   padding-bottom: 5px;
 }
 
@@ -444,7 +461,7 @@ a:hover {
 
 .hero-subhead {
   max-width: 60%;
-  color: #F2F2E7;
+  color: var(--limestone-500);
   font-size: 30px;
   line-height: 44px;
 }
@@ -560,7 +577,7 @@ a:hover {
    ========================================================================== */
 .black-text {
   font-family: 'Bely Display', sans-serif;
-  color: #1A1918;
+  color: var(--gloaming-900);
   font-size: 50px;
   font-weight: 400;
 }
@@ -571,7 +588,7 @@ a:hover {
 
 .paragraph-3 {
   margin: 100px 0;
-  color: #F2F2E7;
+  color: var(--limestone-500);
 }
 
 .italic-text {
@@ -581,7 +598,7 @@ a:hover {
 
 .calltoaction {
   margin-bottom: 30px;
-  color: #F2F2E7;
+  color: var(--limestone-500);
   font-size: 26px;
   line-height: 36px;
   font-weight: 300;
@@ -589,7 +606,7 @@ a:hover {
 
 .calltoaction a {
   box-shadow: inset 0 -2px 0 0 #B1C4C7;
-  color: #F8F8F2;
+  color: var(--limestone-100);
   padding-bottom: 5px;
 }
 
@@ -609,7 +626,7 @@ a:hover {
 
 .image-5 {
   filter: invert(80%);
-  color: #F2F2E7;
+  color: var(--limestone-500);
 }
 
 .image-6 {
@@ -653,7 +670,7 @@ a:hover {
 }
 
 .footer-link:hover {
-  color: #F2F2E7;
+  color: var(--limestone-500);
 }
 
 .footer-list {
@@ -736,12 +753,12 @@ a:hover {
 
 .menu-button.open .menu-icon::before {
   transform: rotate(45deg) translate(5px, 6px);
-  background-color: #383533;
+  background-color: var(--gloaming-700);
 }
 
 .menu-button.open .menu-icon::after {
   transform: rotate(-45deg) translate(5px, -6px);
-  background-color: #383533;
+  background-color: var(--gloaming-700);
 }
 
 /* Quote Slider
@@ -890,7 +907,7 @@ button {
    ========================================================================== */
 a:focus,
 button:focus {
-  outline: 2px solid #81A479;
+  outline: 2px solid var(--sapling-500);
   outline-offset: 2px;
 }
 
@@ -964,7 +981,7 @@ button:focus:not(:focus-visible) {
     width: 100%;
     height: 100vh;
     padding: 20px;
-    background-color: hsl(109 19% 56%/ 98%);
+    background-color: var(--sapling-overlay);
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -984,7 +1001,7 @@ button:focus:not(:focus-visible) {
     padding: 15px 0;
     margin: 0;
     display: block;
-    color: #383533;
+    color: var(--gloaming-700);
     font-size: 36px;
     opacity: 0;
     transform: translateY(20px);
@@ -1209,7 +1226,7 @@ button:focus:not(:focus-visible) {
   }
 
   .image-5 {
-    max-width: 50%;
+    max-width: 10vw;
   }
 
   .heading-3-bottom {
