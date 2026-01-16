@@ -430,13 +430,13 @@ a:hover {
 .hero-content {
   position: relative;
   z-index: 0;
-  width: 100%;
-  max-width: 1080px;
+  width: 1080px;
+  max-width: 90%;
   margin-left: auto;
   margin-right: auto;
   padding-top: 10vh;
-  padding-left: 40px;
-  padding-right: 40px;
+  padding-left: 0;
+  padding-right: 0;
   box-sizing: border-box;
   flex: 0 auto;
   object-fit: fill;
@@ -736,10 +736,12 @@ a:hover {
 
 .menu-button.open .menu-icon::before {
   transform: rotate(45deg) translate(5px, 6px);
+  background-color: #383533;
 }
 
 .menu-button.open .menu-icon::after {
   transform: rotate(-45deg) translate(5px, -6px);
+  background-color: #383533;
 }
 
 /* Quote Slider
@@ -945,27 +947,69 @@ button:focus:not(:focus-visible) {
     display: block !important;
   }
 
-  .nav-menu-2 {
-    display: none !important;
-    position: absolute;
-    top: 100%;
-    right: 0;
-    min-width: 240px;
-    padding: 20px;
-    background-color: #1A1918;
-    flex-direction: column;
+  .menu-button.open {
+    position: fixed;
+    top: 50px;
+    right: 5%;
     z-index: 1000;
   }
 
-  .nav-menu-2.open {
+  .nav-menu-2 {
     display: flex !important;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100vh;
+    padding: 20px;
+    background-color: hsl(109 19% 56%/ 98%);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    z-index: 999;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.4s ease-out, visibility 0.4s ease-out;
+  }
+
+  .nav-menu-2.open {
+    opacity: 1;
+    visibility: visible;
   }
 
   .nav-menu-2 .nav-link {
     padding: 15px 0;
     margin: 0;
     display: block;
-    color: #F2F2E7;
+    color: #383533;
+    font-size: 36px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.4s ease-out, transform 0.4s ease-out;
+  }
+
+  .nav-menu-2.open .nav-link {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .nav-menu-2.open .nav-link:nth-child(1) {
+    transition-delay: 0.1s;
+  }
+
+  .nav-menu-2.open .nav-link:nth-child(2) {
+    transition-delay: 0.2s;
+  }
+
+  .nav-menu-2.open .nav-link:nth-child(3) {
+    transition-delay: 0.3s;
+  }
+
+  .nav-menu-2.open .nav-link:nth-child(4) {
+    transition-delay: 0.4s;
   }
 
   .nav-link {
@@ -979,7 +1023,7 @@ button:focus:not(:focus-visible) {
   .hero-content {
     padding-right: 5vw;
     padding-bottom: 10vh;
-    padding-left: 5vw;
+    padding-left: 1vw;
   }
 
   .feature-wrap {
