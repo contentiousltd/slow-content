@@ -538,10 +538,9 @@ a:hover {
 
 .container {
   max-width: 940px;
+  width: 90%;
   margin: 0 auto;
-  padding: 5vh 5vh 10vw;
-  padding-left: 40px;
-  padding-right: 40px;
+  padding: 5vh 0;
   box-sizing: border-box;
 }
 
