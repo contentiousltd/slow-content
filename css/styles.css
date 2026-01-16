@@ -509,7 +509,7 @@ a:hover {
 }
 
 .feature-image img {
-  max-width: 100%;
+  max-width: 50vw;
   height: auto;
 }
 
@@ -1008,7 +1008,11 @@ button:focus:not(:focus-visible) {
   }
 
   .quote-wrap {
-    width: 70vw;
+    width: 90vw;
+  }
+
+  .heading-4 {
+    font-size: 26px;
   }
 
   .brand {
