@@ -466,7 +466,7 @@ a:hover {
    ========================================================================== */
 .feature-wrap {
   display: flex;
-  width: 90vw;
+  width: 90%;
   max-width: 1080px;
   margin-top: 10vh;
   margin-bottom: 10vh;
@@ -930,11 +930,11 @@ button:focus:not(:focus-visible) {
   }
 
   .nav {
-    width: 100vw;
+    width: 100%;
   }
 
   .nav-inner {
-    width: 90vw;
+    width: 90%;
   }
 
   .nav-menu-wrap {
@@ -1000,7 +1000,7 @@ button:focus:not(:focus-visible) {
   }
 
   .quote-slider {
-    width: 100vw;
+    width: 100%;
     height: auto;
     min-height: 500px;
     padding-top: 50px;
@@ -1105,7 +1105,7 @@ button:focus:not(:focus-visible) {
   }
 
   .nav-inner {
-    width: 100vw;
+    width: 100%;
   }
 
   .feature-content {
@@ -1146,7 +1146,7 @@ button:focus:not(:focus-visible) {
   }
 
   .quote-slider {
-    width: 100vw;
+    width: 100%;
     padding-right: 5vw;
     padding-left: 5vw;
   }
