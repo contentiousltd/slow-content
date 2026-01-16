@@ -360,12 +360,12 @@ body {
 
 .nav {
   display: block;
-  width: 100%;
-  max-width: 1080px;
+  width: 1080px !important;
+  max-width: 90%;
   margin-left: auto;
   margin-right: auto;
-  padding-left: 40px;
-  padding-right: 40px;
+  padding-left: 0px;
+  padding-right: 0px;
   box-sizing: border-box;
   height: auto;
   background-color: transparent;
@@ -934,7 +934,7 @@ button:focus:not(:focus-visible) {
   }
 
   .nav-inner {
-    width: 90%;
+    width: 100%;
   }
 
   .nav-menu-wrap {
